@@ -1,0 +1,139 @@
+
+
+/* ========== 页面整体 ========== */
+.app {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+/* ========== 弹性容器：左右分栏 ========== */
+.container {
+  /* gap 设置子元素的间距为30像素 */
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* 左右面板通用样式 */
+.left-panel,
+.right-panel {
+  flex: 1; /* 平分宽度 */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.left-panel h2,
+.right-panel h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* ========== 左侧：Todo 输入区 ========== */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-section button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Todo 列表样式 ========== */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+.todo-item span {
+  flex: 1;
+}
+
+/* ========== 右侧：API 文章列表样式 ========== */
+.loading,
+.error {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.loading {
+  color: #007bff;
+}
+
+.error {
+  color: red;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.post-item h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.post-item p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
